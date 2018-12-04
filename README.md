@@ -93,3 +93,17 @@ Then install the required dependencies with:
 ```python
 pip install scrapy flask
 ```
+
+After installation of libraries completed next task is to migrate a table into database.
+
+```python
+python migration.py
+```
+
+The above command will create a `database.db` file in the root directory and migrate a `comapnies` table.
+
+Next task is to run the scapy spider to collect data save into `comapnies` table. First goto the `scrapy_stock_app` directory as the scrapy command only work in the scrapy app directory and run the following command to start the `vietnam` spider.
+
+```python
+scrapy crawl vietnam
+```
