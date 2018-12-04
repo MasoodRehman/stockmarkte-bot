@@ -49,7 +49,7 @@ https://www.getpostman.com/collections/a008f21bf744ed39f457
 ## Directory Structure
 The following is the directory structure of the project.
 
-![flow diagram](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/directories_structure.png)
+![flow diagram](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/directories_structure.jpg)
 
 ### Stockmarket_bot:
 This is main project directory.
