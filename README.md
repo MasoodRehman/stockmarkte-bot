@@ -122,4 +122,4 @@ This command will start the flask app server on the localhost at port 5000.
 
 ![flask server](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/flask-server-starting.png)
 
-Now you are able to send request to API endpoints for getting data from the server, the endpoints already defined in the above [REST API](#real-cool-heading) section.
+Now you are able to send request to API endpoints for getting data from the server, the endpoints already defined in the above [REST API](#rest-api) section.
