@@ -38,5 +38,10 @@ Method: Get
 Endpoint: http://localhost:5000/companies?revenue_gte=10000 
 
 
-Here is the postman link where all api endpoints implemented
+Here is the postman link where all api endpoints implemented <br/>
 https://www.getpostman.com/collections/a008f21bf744ed39f457
+
+## Directory Structure
+The following is the directory structure of the project.
+
+![flow diagram](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/direcotry_structure.jpg)
