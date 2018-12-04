@@ -18,6 +18,7 @@ conn.execute("""
         company_website TEXT, 
         company_email TEXT, 
         financial_summary TEXT, 
+        revenue TEXT, 
         business_registration TEXT, 
         auditing_company TEXT, 
         crawled_at TEXT
