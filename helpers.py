@@ -1,6 +1,5 @@
 import json
 
-
 def getCompaniesFromJsonFile(filename):
     """
     JSON file reader
