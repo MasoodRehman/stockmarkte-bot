@@ -25,7 +25,7 @@ This endpoint get the data from `store/company_profiles.json` and store it into 
 Method: Get <br/>
 Endpoint: http://localhost:5000/dumpdata
 
-![api dump data](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/api-dumpdata.png)
+![api dump data](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/api-dumpdatas.png)
 
 #### Companies:
 This endpoint return all the companies saved in the database.
