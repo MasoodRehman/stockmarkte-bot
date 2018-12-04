@@ -83,9 +83,13 @@ This file contain database migration, it will create a database along companies 
 ## How to run the code
 First of all create a virtual environment and activate it:
 
-> python -m venv venv
-> source venv/bin/activate
+```python
+   python -m venv venv
+   source venv/bin/activate
+```
 
 Then install the required dependencies with:
 
-> pip install scrapy flask
+```python
+   pip install scrapy flask
+```
