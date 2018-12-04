@@ -25,11 +25,15 @@ This endpoint get the data from `store/company_profiles.json` and store it into 
 Method: Get <br/>
 Endpoint: http://localhost:5000/dumpdata
 
+![api dump data](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/api-dumpdata.png)
+
 #### Companies:
 This endpoint return all the companies saved in the database.
 
 Method: Get<br/>
 Endpoint: http://localhost:5000/companies
+
+![api companies list](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/api-companies-list.png)
 
 #### Companies Filter:
 This the same endpoint as companies but with query parameters. It will return you the result based on the revenue amount.
@@ -37,6 +41,7 @@ This the same endpoint as companies but with query parameters. It will return yo
 Method: Get<br/>
 Endpoint: http://localhost:5000/companies?revenue_gte=10000 
 
+![api companies filters](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/api-companies-filters.png)
 
 Here is the postman link where all api endpoints implemented <br/>
 https://www.getpostman.com/collections/a008f21bf744ed39f457
@@ -44,7 +49,7 @@ https://www.getpostman.com/collections/a008f21bf744ed39f457
 ## Directory Structure
 The following is the directory structure of the project.
 
-![flow diagram](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/directories_structure.jpg)
+![flow diagram](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/directories_structure.png)
 
 ### Stockmarket_bot:
 This is main project directory.
@@ -107,3 +112,12 @@ Next task is to run the scapy spider to collect data save into `comapnies` table
 ```python
 scrapy crawl vietnam
 ```
+
+After crawling stock companies data now we have to shift the data that already stored in a `store/company_profiles.json` file into the database. Before dumping the data into database let’s start the flask server for serving the client request that send to the REST API endpoints.
+
+```python
+python app.py
+```
+This command will start the flask app server on the localhost at port 5000.
+
+![flask server](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/flask-server-starting.png)
