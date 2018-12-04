@@ -112,6 +112,11 @@ Next task is to run the scapy spider to collect data save into `comapnies` table
 ```python
 scrapy crawl vietnam
 ```
+Spider start
+![spider start](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/spider-start.jpg)
+
+Spider end
+![spider end](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/spider-end.jpg)
 
 After crawling stock companies data now we have to shift the data that already stored in a `store/company_profiles.json` file into the database. Before dumping the data into database let’s start the flask server for serving the client request that send to the REST API endpoints.
 
