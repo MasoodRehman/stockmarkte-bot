@@ -5,7 +5,6 @@ from helpers import getCompaniesFromJsonFile, dict_factory
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def home():
     """
