@@ -14,13 +14,13 @@ The above flow diagram shows how our scrapping process should work:
 When scrapy spider invoked it will send a request to the target website in our case it is http://stock.vietnammarkets.com/vietnam-stock-market.php after getting response from the website it will start parsing the data make it clean it will again send another request on the link but this time it will send request for getting the company detail once get the response from there it will make the response clean and assign the company detail data to the item dictionary. After assigning data to the dictionary parameters it will pass that data to the item pipeline for further processing.
 
 ### Item Pipeline
-Item pipeline get the item dictionary object that passed by spider and save into the store/company_profiles.json file.
+Item pipeline get the item dictionary object that passed by spider and save into the `store/company_profiles.json` file.
 
 ### REST API
 Web api expose some endpoints to the client through which clients gets data from the datastore by applying different criteria. The api endpoint and its details are given below.
 
 #### Dumpdata:
-This endpoint get the data from store/company_profiles.json and store it into database.
+This endpoint get the data from `store/company_profiles.json` and store it into database.
 
 Method: Get <br/>
 Endpoint: http://localhost:5000/dumpdata
@@ -52,16 +52,15 @@ This is main project directory.
 ### Scrapy_stock_app:
 This is the scrapy project directory where scrapy spider, item dictionary, item pipeline and other scrapy framework setting and configuration files are placed.
 
-    #### Spider
-    This is the home of spiders. All scrapy spiders are placed in this directory. 
-    Currently  there is only one spider `vietnam.py` contain in the directly.
+   ##### Spider
+   This is the home of spiders. All scrapy spiders are placed in this directory. 
+   Currently  there is only one spider `vietnam.py` contain in the directly.
     
-    #### Items.py:
-    This is the item dictionary which fill by the spider from crawled data.
+   ##### Items.py:
+   This is the item dictionary which fill by the spider from crawled data.
     
-    #### Pipelines.py
-    This is the item pipeline which get the item dictionary passed by spider and saved 
-    Into the `store/company_profiles.json` file.
+   ##### Pipelines.py
+   This is the item pipeline which get the item dictionary passed by spider and saved into the `store/company_profiles.json` file.
     
 ### Store:
 This directory contain the json file where spider save the item dictionary.
@@ -82,3 +81,11 @@ This helper file contain function that help flask app, such as load the data fro
 This file contain database migration, it will create a database along companies table.
 
 ## How to run the code
+First of all create a virtual environment and activate it:
+
+> python -m venv venv
+> source venv/bin/activate
+
+Then install the required dependencies with:
+
+> pip install scrapy flask
