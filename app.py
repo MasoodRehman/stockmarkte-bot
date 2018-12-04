@@ -14,9 +14,12 @@ def home():
     This function testing purpose to make shure the app is working.
 
     @method GET
-    @return HTML
+    @return JSON
     """
-    return render_template('home.html', name='User')
+    return jsonify({
+        "status": "success",
+        "message": "I am working"
+    })
 
 
 @app.route('/dumpdata')
@@ -97,7 +100,7 @@ def companies():
         _data = list()
         for d in data:
             financial_summary = json.loads(d.get('financial_summary'))
-            if financial_summary and financial_summary.get('Market Cap:').replace(',', '') >= revenue_gte:
+            if financial_summary and financial_summary.get('market_cap').replace(',', '') >= revenue_gte:
                 # decode json column string into dictionary of filtered records
                 d['business_registration'] = json.loads(d['business_registration'])
                 d['company_phone_number'] = json.loads(d['company_phone_number'])
