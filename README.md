@@ -128,3 +128,17 @@ This command will start the flask app server on the localhost at port 5000.
 ![flask server](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/flask-server-starting.png)
 
 Now you are able to send request to API endpoints for getting data from the server, the endpoints already defined in the above [REST API](#rest-api) section.
+
+## Unit Testing
+
+For testing it is used the default scrapy framework unit testing module called contracts. There a contract located in `scrapy_stock_app/contract.py` which check the item dictionary parameter either it has the rquired parameters if in case any of the parameter that mentioned in the contract string is missing it should send the log to the specified email address and rasie an exception.
+
+The following command will run the spider contract:
+
+```python
+scrapy check
+```
+
+The contract string where the parameters listed out for checking can be found in `scrapy_stock_app/spider/vietnam.py`.
+
+![contract](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/unittest-contract.png)
