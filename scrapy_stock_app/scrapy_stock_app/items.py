@@ -53,7 +53,7 @@ class VietnamItem(scrapy.Item):
 
     def getCompanyDetailDict(self, data):
         company_detail_dict = dict()
-        data_list = filter(None, [ ' '.join(raw_token.split()) for raw_token in data ])
+        data_list = list(filter(None, [ ' '.join(raw_token.split()) for raw_token in data ]))
         company_description = list()
         append_summary = True
         for data in data_list:
