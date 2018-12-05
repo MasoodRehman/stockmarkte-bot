@@ -14,6 +14,26 @@ class VietnamSpider(scrapy.Spider):
         =============================================
         This is the parsing method that called by default by scrapy framework for process the response 
         return by the start_url page.
+        
+        Contract that check the following constraints of the current callback method.
+
+        url: 
+            sets the sample url used when checking other contract conditions for this spider. 
+            This contract is mandatory. All callbacks lacking this contract are ignored when running the checks.
+        
+        return: 
+            sets lower and upper bounds for the items and requests returned by the spider. 
+            The upper bound is optional
+        
+        scrapes: 
+            checks that all the items returned by the callback have the specified fields. This contract is now
+            override with our custom contract called `itemAttributesCheck` so that we can send an email if our 
+            custom contract become failed.
+        
+        @url http://stock.vietnammarkets.com/vietnam-stock-market.php
+        @returns items 0
+        @returns requests 0
+        @itemAttributesCheck ticker_symbol business listing_bourse company_name company_url
         """
         rows = response.css('#VNMC_contentinner .fullbox .results tr:nth-child(n+2)')
         for row in rows:
