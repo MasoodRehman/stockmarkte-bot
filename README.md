@@ -97,6 +97,10 @@ Then install the required dependencies with:
 
 ```python
 pip install scrapy flask
+
+OR install it from requirements.txt file
+
+pip install -r requirements.txt
 ```
 
 After installation of libraries completed next task is to migrate a table into database.
