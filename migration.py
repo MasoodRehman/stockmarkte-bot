@@ -1,7 +1,7 @@
 import sqlite3
 
 conn = sqlite3.connect('database.db')
-print "Opened database successfully";
+print ("Opened database successfully");
 
 conn.execute("""
     CREATE TABLE companies (
@@ -25,5 +25,5 @@ conn.execute("""
     )
 """)
 
-print "Table created successfully";
+print ("Table created successfully");
 conn.close()
