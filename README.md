@@ -141,4 +141,4 @@ scrapy check
 
 The contract string where the parameters listed out for checking can be found in `scrapy_stock_app/spider/vietnam.py`.
 
-![contract](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/unittest-contract.png)
+![contract](https://github.com/MasoodRehman/stockmarkte-bot/blob/master/store/unittest-contracts.png)
