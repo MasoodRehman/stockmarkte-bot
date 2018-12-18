@@ -33,6 +33,6 @@ class ItemValueCheckContract(Contract):
                 raise ContractFail("'%s' field is missing" % mail_body['args'])
 
     def send_email(self, mail_body):
-        mailer = MailSender(mailfrom="justjhondoe@gmail.com",smtphost="smtp.gmail.com",smtpport=587,smtpuser="justjhondoe@gmail.com",smtppass="jhondoe.123")
+        mailer = MailSender(mailfrom="xxx@gmail.com",smtphost="smtp.gmail.com",smtpport=587,smtpuser="xxx@gmail.com",smtppass="xxx")
         return mailer.send(to=["masoodurrehman42@gmail.com"],subject="StockSpider: Stock Spiders Contract Error",body=mail_body)
         
